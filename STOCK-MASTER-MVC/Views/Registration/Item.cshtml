@@ -1,0 +1,82 @@
+﻿@model Student
+@using Newtonsoft.Json
+@{
+    ViewBag.Title = "Administrator Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Hidden("SavePersonTypes", Url.Action("SavePersonTypes", "Master"))
+
+<section>
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Item List</h5>
+                    <div class="col-12 nav nav-pills justify-content-end" style="margin-right:15px; margin-top:-25px">
+                        <a href="@Url.Action("AddNewItem", "Registration")" class="btn btn-primary rounded" type="submit">+ Add New</a>
+                    </div>
+                    <br />
+                    <br />
+                    <!-- Block styled form -->
+                    <form class="row g-3 form-group">
+                        <div class="row">
+                            <div class="col-xl-12 mb-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <table id="example" class="table table-striped datatable" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Item ID</th>
+                                                    <th>Item Name</th>
+                                                    <th>Item Category</th>
+                                                    <th>BulkId Name</th>
+                                                    <th>Preorder Level</th>
+                                                    <th>More</th>
+                                                    <th>Edit</th>
+                                                    <th>Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @{
+                                                    for (int i = 0; i < 30; i++)
+                                                    {
+                                                        <tr>
+                                                            <td>I-0001 @i</td>
+                                                            <td>ABC00RT01</td>
+                                                            <td>Vaccination</td>
+                                                            <td align="center">A</td>
+                                                            <td align="center">20</td>
+                                                            <td align="center">
+                                                                <button type="button" class="btn btn-icon btn-info btn-xs">
+                                                                    <i class="fa fa-times"></i>
+                                                                </button>
+                                                            </td>
+                                                            <td align="center">
+                                                                <button type="button" class="btn btn-icon btn-primary btn-xs">
+                                                                    <i class="fa fa-times"></i>
+                                                                </button>
+                                                            </td>
+                                                            <td align="center">
+                                                                <button type="button" class="btn btn-icon btn-danger btn-xs">
+                                                                    <i class="fa fa-times"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                    }
+                                                }
+                                                                                              
+                                            </tbody>
+                                        </table>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- END : Block styled form -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

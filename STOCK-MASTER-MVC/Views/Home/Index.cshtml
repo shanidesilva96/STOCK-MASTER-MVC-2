@@ -1,0 +1,25 @@
+﻿@model Student
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<section>
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Block styled form</h5>
+
+                    <div class="col-sm-3 col-lg-3 col-md-3 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label">Bank</label>
+                            @Html.DropDownListFor(model => model.BankId, new SelectList(Model.BankList, "BankId", "BankName"), " - Select Bank Name -", new { @class = "form-select" })
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

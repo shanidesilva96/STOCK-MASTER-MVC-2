@@ -1,0 +1,134 @@
+﻿@model Student
+
+
+@Html.Hidden("SavePersonTypes", Url.Action("SavePersonTypes", "Master"))
+
+<style>
+    .vl {
+        border-left: 4px solid #dedede;
+        height: 40px;
+        margin-top: 25px;
+    }
+</style>
+
+<section>
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Patient form</h5>
+                    <div class="col-12 nav nav-pills justify-content-end" style="margin-right:15px; margin-top:-25px">
+                        <a href="@Url.Action("Patient", "Registration")" class="btn btn-primary   rounded" type="submit">Back</a>
+                    </div>
+                    <br />
+                    <br />
+
+                    <!-- Block styled form -->
+                    <form class="row g-3 form-group">
+
+                        <dir class="form-group row">
+                            <div class="col-md-3">
+                                <label for="_dm-inputEmail2" class="form-label">Patient ID</label>
+                                @* <input id="_dm-inputEmail2" type="email" class="form-control"> *@
+
+                                @Html.EditorFor(model => model.StudentName, new { htmlAttributes = new { @class = "form-control", @placeholder = "First Name", @readonly= "readonly" } })
+                                @Html.ValidationMessageFor(model => model.StudentName, "", new { @class = "text-danger" })
+                            </div>
+                        </dir>
+
+                        <dir class="form-group row">
+                            <div class="col-md-3">
+                                <label for="_dm-inputEmail2" class="form-label">Patient First Name</label>
+                                @* <input id="_dm-inputEmail2" type="email" class="form-control"> *@
+
+                                @Html.EditorFor(model => model.StudentName, new { htmlAttributes = new { @class = "form-control", @placeholder = "First Name", @readonly= "readonly" } })
+                                @Html.ValidationMessageFor(model => model.StudentName, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                <label for="_dm-inputEmail2" class="form-label">Patient Last Name</label>
+                                @* <input id="_dm-inputEmail2" type="email" class="form-control"> *@
+
+                                @Html.EditorFor(model => model.StudentName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Middle Name", @readonly= "readonly" } })
+                                @Html.ValidationMessageFor(model => model.StudentName, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="col-md-3">
+                                <label for="_dm-inputEmail2" class="form-label">Date Of Birth</label>
+                                <input id="_dm-mdDateTimePicker-showDate-portrait" type="text" class="form-control" placeholder="Format date : DDDD, DDD-MMM-YYY" autocomplete="on">
+                            </div>
+                        </dir>
+
+                        <dir class="form-group row">
+
+                            <div class="col-md-3">
+                                <label for="_dm-inputEmail2" class="form-label">NIC</label>
+                                @* <input id="_dm-inputEmail2" type="email" class="form-control"> *@
+
+                                @Html.EditorFor(model => model.StudentName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Last Name", @readonly= "readonly" } })
+                                @Html.ValidationMessageFor(model => model.StudentName, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="col-md-3">
+                                <label for="_dm-inputEmail2" class="form-label">Custodians NIC</label>
+                                @* <input id="_dm-inputEmail2" type="email" class="form-control"> *@
+
+                                @Html.EditorFor(model => model.StudentName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Last Name", @readonly= "readonly" } })
+                                @Html.ValidationMessageFor(model => model.StudentName, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                <label for="_dm-inputEmail2" class="form-label">Mobile Number</label>
+                                @* <input id="_dm-inputEmail2" type="email" class="form-control"> *@
+
+                                @Html.EditorFor(model => model.StudentName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Last Name", @readonly= "readonly" } })
+                                @Html.ValidationMessageFor(model => model.StudentName, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="col-md-3">
+                                <label for="_dm-inputEmail2" class="form-label">Gender</label>
+                                <div class="col-sm-9 pt-2">
+                                    <div class="form-check form-check-inline">
+                                        <input id="_dm-inlineRadio1" class="form-check-input" type="radio" name="inlineRadioOptions" value="option1" checked="">
+                                        <label for="_dm-inlineRadio1" class="form-check-label">Male</label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input id="_dm-inlineRadio2" class="form-check-input" type="radio" name="inlineRadioOptions" value="option2">
+                                        <label for="_dm-inlineRadio2" class="form-check-label">Female</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </dir>
+
+                        <dir class="form-group row">
+                            <div class="col-md-6">
+                                <div>
+                                    <label for="_dm-inputEmail2" class="form-label">Address</label>
+                                    <textarea id="_dm-textareaInput" class="form-control" placeholder="Address" rows="2"></textarea>
+                                </div>
+                            </div>
+                        </dir>
+
+                        <div class="col-12">
+                            <div class="form-inline">
+                                <a href="@Url.Action("Patient", "Registration")" class="btn btn-primary  rounded" style="width:90px">Clear</a>
+                                <button style="width:90px" class="btn btn-primary rounded" onclick="SavePersonTypes()">Save </button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- END : Block styled form -->
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+@* <script src="~/Content/js/Master/PersonTypes.js"></script> *@
+
+@* <script>
+    function location_r() {
+        window.location = "PersonTypes";
+    }
+</script> *@

@@ -1,0 +1,330 @@
+﻿@model Student
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    .vl {
+        border-left: 4px solid #dedede;
+        height: 40px;
+        margin-top: 25px;
+    }
+</style>
+
+<section>
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col d-flex justify-content-between">
+                            <h5 class="card-title">Item Details</h5>
+                            <h5 class="card-title style="color: rgb(36, 68, 127);">GRN No: 5487</h5>
+                        </div>
+                    </div>
+
+                    <!-- Block styled form -->
+                    <form class="row g-3">
+                        <div class="col-md-12">
+                            <label for="inputState" class="form-label">Item</label>
+                            <select id="inputState" class="form-select select2">
+                                <option selected="">Choose...</option>
+                                <option>Item 1</option>
+                                <option>Item 2</option>
+                                <option>Item 3</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="_dm-inputEmail2" class="form-label">Item Category</label>
+                            <input id="_dm-inputEmail2" type="email" class="form-control" disabled>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="_dm-inputEmail2" class="form-label">Current Stock</label>
+                            <input id="_dm-inputEmail2" type="email" class="form-control" disabled>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <label for="_dm-inputEmail2" class="form-label">Description</label>
+                            <textarea id="_dm-textareaInput" class="form-control" placeholder="Textarea" rows="5" disabled></textarea>
+                        </div>
+                    </form>
+                    <!-- END : Block styled form -->
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col d-flex justify-content-between">
+                            <h5 class="card-title">Supplier Details</h5>
+                        </div>
+                    </div>
+
+                    <!-- Block styled form -->
+                    <form class="row g-3">
+                        <div class="col-md-12">
+                            <label for="inputState" class="form-label">Supplier</label>
+                            <select id="inputState" class="form-select select2">
+                                <option selected="">Choose...</option>
+                                <option>Supplier 1</option>
+                                <option>Supplier 2</option>
+                                <option>Supplier 3</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="_dm-inputEmail2" class="form-label">Registration No</label>
+                            <input id="_dm-inputEmail2" type="email" class="form-control" disabled>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="_dm-inputEmail2" class="form-label">Contact No</label>
+                            <input id="_dm-inputEmail2" type="email" class="form-control" disabled>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <label for="_dm-inputEmail2" class="form-label">Item Category</label>
+                            <textarea id="_dm-textareaInput" class="form-control" placeholder="Textarea" rows="5" disabled></textarea>
+                        </div>
+                    </form>
+                    <!-- END : Block styled form -->
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col d-flex justify-content-between">
+                            <h5 class="card-title">Patient Details</h5>
+                        </div>
+                    </div>
+
+                    <!-- Block styled form -->
+                    <form class="row g-3">
+                        <div class="col-md-12">
+                            <label for="inputState" class="form-label">Supplier</label>
+                            <select id="inputState" class="form-select select2">
+                                <option selected="">Choose...</option>
+                                <option>Supplier 1</option>
+                                <option>Supplier 2</option>
+                                <option>Supplier 3</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="_dm-inputEmail2" class="form-label">Registration No</label>
+                            <input id="_dm-inputEmail2" type="email" class="form-control" disabled>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="_dm-inputEmail2" class="form-label">Contact No</label>
+                            <input id="_dm-inputEmail2" type="email" class="form-control" disabled>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <label for="_dm-inputEmail2" class="form-label">Item Category</label>
+                            <textarea id="_dm-textareaInput" class="form-control" placeholder="Textarea" rows="5" disabled></textarea>
+                        </div>
+                    </form>
+                    <!-- END : Block styled form -->
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-12 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="col d-flex">
+                                <h5 class="card-title" style="padding-top: 10px;">Location Should Be Pick :&nbsp &nbsp &nbsp &nbsp A-2</h5>
+                                &nbsp &nbsp &nbsp &nbsp <button type="button" class="btn btn-outline-secondary btn-xs">Change</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="col d-flex justify-content-between">
+                                <h5 class="card-title" style="padding-top: 10px;">Expiration Date :&nbsp &nbsp &nbsp &nbsp 2024 December 15</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="col-md-12">
+                                <label for="inputState" class="form-label">Stock Out Date</label>
+                                <input id="_dm-mdDateTimePicker-showDate-portrait" type="text" class="form-control" placeholder="Format date : DDDD, DDD-MMM-YYY" autocomplete="on" disabled>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="row">
+                        <h5 class="card-title">Quantity Details</h5>
+                        <br />
+                        <br />
+                        <!-- Block styled form -->
+                        <form class="row g-3">
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label for="inputState" class="form-label">Quantity</label>
+                                        <div data-mdb-input-init class="form-outline">
+                                            <input min="0" type="number" id="typeNumber" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label for="inputState" class="form-label">Expiration Date</label>
+                                        <input id="_dm-mdDateTimePicker-showDate-portrait" type="text" class="form-control" placeholder="Format date : DDDD, DDD-MMM-YYY" autocomplete="on">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label for="inputState" class="form-label">Number of bulk</label>
+                                        <div data-mdb-input-init class="form-outline">
+                                            <input min="0" type="number" id="typeNumber" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="inputState" class="form-label">Number of item</label>
+                                        <div data-mdb-input-init class="form-outline">
+                                            <input min="0" type="number" id="typeNumber" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 d-flex align-items-center justify-content-center">
+                                        <div class="vl"></div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="inputState" class="form-label">Number of separate item</label>
+                                        <div data-mdb-input-init class="form-outline">
+                                            <input min="0" type="number" id="typeNumber" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            @* <div class="col-md-3">
+                            <hr style="height:1px;border-width:0;background-color:rgb(235, 235, 235)">
+                            </div> *@
+
+
+                            @* <div class="col-md-3">
+                            <hr style="height:1px;border-width:0;background-color:rgb(235, 235, 235)">
+                            </div> *@
+                            @*
+                            <br />
+                            <br /> *@
+
+                        </form>
+                        <!-- END : Block styled form -->
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="mt-4 d-flex flex-plus justify-content-left">
+                            <button type="button" class="btn btn-primary">
+                                <i class="fa fa-plus fs-5 me-2"></i> Add Quantity
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-12 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <!-- GridJS - Fixed header -->
+                                    <div id="_dm-gridjsFixedHeader">
+                                        <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
+                                            <div class="gridjs-wrapper" style="height: 285px;">
+                                                <table role="grid" class="gridjs-table table table-striped" style="height: 285px;">
+                                                    <thead class="gridjs-thead">
+                                                        <tr class="gridjs-tr">
+                                                            <th data-column-id="id" class="gridjs-th gridjs-th-fixed" style="top: 0px; min-width: 53px; width: 10%;"><div class="gridjs-th-content">#</div></th>
+                                                            <th data-column-id="name" class="gridjs-th gridjs-th-fixed" style="top: 0px; min-width: 108px; width: 25%;"><div class="gridjs-th-content">Expiration Date</div></th>
+                                                            <th data-column-id="lastLogin" class="gridjs-th gridjs-th-fixed" style="top: 0px; min-width: 132px; width: 17%;"><div class="gridjs-th-content">Number of bulk</div></th>
+                                                            <th data-column-id="amount" class="gridjs-th gridjs-th-fixed" style="top: 0px; min-width: 66px; width: 17%;"><div class="gridjs-th-content">Number of item</div></th>
+                                                            <th data-column-id="amount" class="gridjs-th gridjs-th-fixed" style="top: 0px; min-width: 66px; width: 17%;"><div class="gridjs-th-content">Number of separate item</div></th>
+                                                            <th data-column-id="amount" class="gridjs-th gridjs-th-fixed" style="top: 0px; min-width: 66px; width: 7%;"><div class="gridjs-th-content">Edit</div></th>
+                                                            <th data-column-id="amount" class="gridjs-th gridjs-th-fixed" style="top: 0px; min-width: 66px; width: 7%;"><div class="gridjs-th-content">Remove</div></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="gridjs-tbody">
+                                                        @{
+                                                            for (int i = 0; i < 20; i++)
+                                                            {
+                                                                <tr class="gridjs-tr">
+                                                                    <td data-column-id="id" class="gridjs-td">53454</td>
+                                                                    <td data-column-id="name" class="gridjs-td">Charles S Boyle</td>
+                                                                    <td data-column-id="lastLogin" class="gridjs-td">Today 01:25 PM</td>
+                                                                    <td data-column-id="amount" class="gridjs-td">$132.20</td>
+                                                                    <td data-column-id="amount" class="gridjs-td">$132.20</td>
+                                                                    <td data-column-id="amount" class="gridjs-td">
+                                                                        <button type="button" class="btn btn-icon btn-info btn-xs">
+                                                                            <i class="demo-pli-mine"></i>
+                                                                        </button>
+                                                                    </td>
+                                                                    <td data-column-id="amount" class="gridjs-td">
+                                                                        <button type="button" class="btn btn-icon btn-danger btn-xs">
+                                                                            <i class="fa fa-times"></i>
+                                                                        </button>
+                                                                    </td>
+                                                                </tr>
+                                                            }
+                                                        }
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div id="gridjs-temp" class="gridjs-temp"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- END : GridJS - Fixed header -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex justify-content-end gap-2">
+                            <div class="mt-4 d-flex flex-plus justify-content-end">
+                                <button type="button" class="btn btn-danger">
+                                    <i class="fa fa-undo fs-5 me-2"></i> CLEAR
+                                </button>
+                            </div>
+                            <div class="mt-4 d-flex flex-plus justify-content-end">
+                                <button type="button" class="btn btn-primary">
+                                    <i class="fa fa-floppy-o fs-5 me-2"></i> SAVE
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</section>

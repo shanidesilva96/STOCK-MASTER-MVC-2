@@ -1,0 +1,73 @@
+﻿@model Student
+@using Newtonsoft.Json
+@{
+    ViewBag.Title = "Administrator Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Hidden("SavePersonTypes", Url.Action("SavePersonTypes", "Master"))
+
+<section>
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Stock Manage</h5>
+                    <div class="col-12 nav nav-pills justify-content-end" style="margin-right:15px; margin-top:-25px">
+                    </div>
+                    <br />
+                    <br />
+                    <!-- Block styled form -->
+                    <form class="row g-3 form-group">
+                        <div class="row">
+                            <div class="col-xl-12 mb-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <table id="example" class="table table-striped datatable" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Inv ID</th>
+                                                    <th>Item</th>
+                                                    <th>GRN No</th>
+                                                    <th>QTY</th>
+                                                    <th>Is Bulk Item</th>
+                                                    <th>Bulk MAINT ID</th>
+                                                    <th>Bulk Serial No</th>
+                                                    <th>Update</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @{
+                                                    for (int i = 0; i < 30; i++)
+                                                    {
+                                                        <tr>
+                                                            <td>Inv-00001 @i</td>
+                                                            <td>SD-IH66Y</td>
+                                                            <td>G-001</td>
+                                                            <td>2</td>
+                                                            <td>TRUE</td>
+                                                            <td>SB-545879</td>
+                                                            <td>Male</td>
+                                                            <td align="center">
+                                                                <button type="button" class="btn btn-icon btn-primary btn-xs">
+                                                                    <i class="fa fa-times"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                    }
+                                                }
+                                                                                              
+                                            </tbody>
+                                        </table>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- END : Block styled form -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
